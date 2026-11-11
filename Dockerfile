@@ -1,0 +1,6 @@
+FROM python:3.10-slim
+WORKDIR /app
+COPY RMB30026.py /app/
+RUN pip install --no-cache-dir numpy flask flask-cors
+EXPOSE 5026
+CMD ["python", "RMB30026.py"]
